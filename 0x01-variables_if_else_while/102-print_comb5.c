@@ -29,7 +29,7 @@ int main(void)
 			putchar(' ');
 			putchar(c + '0');
 			putchar(d + '0');
-			if (comb1 != 89)
+			if (comb1 != 98)
 			{
 				putchar(',');
 				putchar(' ');
