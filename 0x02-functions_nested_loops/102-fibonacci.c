@@ -8,16 +8,17 @@
 int main(void)
 {
 	short i;
-	long p = 1, c = 2;
+	long f = 1, s = 2, n = f + s;
 
-	printf("%ld, %ld", p, c);
+	printf("%ld, %ld", f, s);
 	for (i = 1; i <= 50; i++)
 	{
 		if (i != 50)
 			printf(", ");
-		printf("%ld", p + c);
-		p = c;
-		c = p + c;
+		printf("%ld", n);
+		f = s;
+		s = n;
+		n = f + s;
 	}
 	putchar('\n');
 	return (0);
