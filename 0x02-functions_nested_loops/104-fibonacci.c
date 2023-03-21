@@ -8,8 +8,8 @@
 int main(void)
 {
 	short i;
-	unsigned long int f = 1, s = 2, n = f + s, limit = 100000000000;
-	
+	unsigned long f = 1, s = 2, n = f + s, limit = 100000000000;
+
 	printf("%ld, %ld", f, s);
 	for (i = 1; i < 97; i++)
 	{
