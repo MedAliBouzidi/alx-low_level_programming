@@ -8,14 +8,17 @@
 int main(void)
 {
 	short i;
-	long f = 1, s = 2, n = f + s;
+	long f = 1, s = 2, n = f + s, limit = 100000000000;
 
 	printf("%ld, %ld", f, s);
 	for (i = 1; i < 97; i++)
 	{
 		if (i != 97)
 			printf(", ");
-		printf("%ld", n);
+		if (n < limit)
+			printf("%ld", n);
+		else
+			printf("%ld%ld", n / limit, n % limit);
 		f = s;
 		s = n;
 		n = f + s;
