@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	short i, s;
+	short i;
+	int s;
 
 	for (i = 1; i < 1024; i++)
 	{
