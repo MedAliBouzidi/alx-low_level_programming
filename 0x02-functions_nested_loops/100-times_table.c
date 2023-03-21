@@ -38,5 +38,4 @@ void print_times_table(int n)
 		_putchar('\n');
 		a++;
 	} while (a <= n);
-	_putchar('\n');
 }
