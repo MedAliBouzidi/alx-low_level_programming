@@ -31,12 +31,12 @@ void print_times_table(int n)
 			else
 			{
 				_putchar((c / 100) + 48);
-				_putchar(((c / 100) / 10) + 48);
-				_putchar(((c / 100) % 10) + 48);
+				_putchar(((c % 100) / 10) + 48);
+				_putchar(((c % 100) % 10) + 48);
 			}
 		}
 		_putchar('\n');
 		a++;
-	} while (a < n);
+	} while (a <= n);
 	_putchar('\n');
 }
