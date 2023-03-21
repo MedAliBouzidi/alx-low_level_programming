@@ -10,7 +10,7 @@ int main(void)
 	short i;
 	long p = 1, c = 2;
 
-	print("%d, %d", p, c);
+	printf("%d, %d", p, c);
 	for (i = 1; i <= 50; i++)
 	{
 		if (i != 50)
