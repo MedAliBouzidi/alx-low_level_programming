@@ -15,8 +15,8 @@ int main(void)
 		printf("%ld", p + c);
 		if (i != 50)
 			printf(", ");
-		p = c;
 		c = p + c;
+		p = c;
 	}
 	putchar('\n');
 	return (0);
