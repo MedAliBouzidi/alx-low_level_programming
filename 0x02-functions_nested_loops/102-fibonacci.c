@@ -11,9 +11,9 @@ int main(void)
 	long f = 1, s = 2, n = f + s;
 
 	printf("%ld, %ld", f, s);
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i < 50; i++)
 	{
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 		printf("%ld", n);
 		f = s;
