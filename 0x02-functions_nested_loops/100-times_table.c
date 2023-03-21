@@ -11,11 +11,10 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 		return;
-	do
-	{
+	do {
 		_putchar(48);
 		if (n == 0)
-			return;
+			break;
 		for (b = 0; b <= n; b++)
 		{
 			c = a * b;
@@ -39,5 +38,6 @@ void print_times_table(int n)
 			}
 		}
 		_putchar('\n');
+		a++;
 	} while (a < n);
 }
