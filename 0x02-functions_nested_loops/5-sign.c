@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign - print the sign of a number 
+ * print_sign - print the sign of a number
  *
- * @c: The character ascii code
+ * @n: The character ascii code
  *
  * Return: Always 0 (Success)
  */
