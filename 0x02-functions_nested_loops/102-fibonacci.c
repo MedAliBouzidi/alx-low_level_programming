@@ -10,7 +10,6 @@ int main(void)
 	short i;
 	long p = 0, c = 1;
 
-	printf("%ld, ", p);
 	for (i = 1; i <= 50; i++)
 	{
 		printf("%ld", p + c);
