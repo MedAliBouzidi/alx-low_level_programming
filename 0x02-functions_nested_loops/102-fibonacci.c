@@ -8,12 +8,14 @@
 int main(void)
 {
 	short i;
-	int p = 0, c = 1;
+	long p = 0, c = 1;
 
-	printf("%d", p);
+	printf("%d, ", p);
 	for (i = 1; i <= 50; i++)
 	{
 		printf("%d", p + c);
+		if (i != 50)
+			printf(", ");
 		p = c;
 		c = p + c;
 	}
