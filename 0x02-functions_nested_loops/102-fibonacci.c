@@ -8,15 +8,16 @@
 int main(void)
 {
 	short i;
-	long p = 0, c = 1;
+	long p = 1, c = 2;
 
+	print("%d, %d", p, c);
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%ld", p + c);
 		if (i != 50)
 			printf(", ");
-		c = p + c;
+		printf("%ld", p + c);
 		p = c;
+		c = p + c;
 	}
 	putchar('\n');
 	return (0);
