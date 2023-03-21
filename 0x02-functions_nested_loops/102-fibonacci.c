@@ -10,10 +10,10 @@ int main(void)
 	short i;
 	long p = 0, c = 1;
 
-	printf("%d, ", p);
+	printf("%ld, ", p);
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%d", p + c);
+		printf("%ld", p + c);
 		if (i != 50)
 			printf(", ");
 		p = c;
