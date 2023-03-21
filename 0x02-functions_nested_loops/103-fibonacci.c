@@ -11,7 +11,8 @@ int main(void)
 
 	while (n < 4000000)
 	{
-		total += n;
+		if (n % 2 == 0)
+			total += n;
 		f = s;
 		s = n;
 		n = f + s;
