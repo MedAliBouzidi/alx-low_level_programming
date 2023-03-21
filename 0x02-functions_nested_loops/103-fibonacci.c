@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long f = 1, s = 2, n = f + s, total = 0;
+	long f = 1, s = 2, n = f + s, total = 2;
 
 	while (n < 4000000)
 	{
