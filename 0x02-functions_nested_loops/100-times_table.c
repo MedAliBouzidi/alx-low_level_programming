@@ -21,10 +21,12 @@ void print_times_table(int n)
 			if (c <= 9)
 			{
 				_putchar(32);
+				_putchar(32);
 				_putchar(c + 48);
 			}
 			else if (c <= 99)
 			{
+				_putchar(32);
 				_putchar((c / 10) + 48);
 				_putchar((c % 10) + 48);
 			}
