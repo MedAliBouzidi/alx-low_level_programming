@@ -41,4 +41,6 @@ int main(void)
 		sh1 = h1;
 		sh2 = h2;
 	}
+	putchar('\n');
+	return (0);
 }
