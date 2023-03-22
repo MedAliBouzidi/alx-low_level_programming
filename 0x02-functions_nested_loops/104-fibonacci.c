@@ -13,7 +13,7 @@ int main(void)
 	unsigned long h1, h2;
 
 	printf("%ld, %ld, ", f, s);
-	for (i = 0; i < 44; i++)
+	for (i = 3; i < 44; i++)
 	{
 		n = f + s;
 		printf("%lu, ", n);
