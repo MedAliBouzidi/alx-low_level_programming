@@ -3,7 +3,7 @@
 /**
  * _isupper - check if character is uppercase or not
  *
- * @c; Charctere ascii code
+ * @c: Charctere ascii code
  *
  * Return: 1 when c is uppercase, 0 otherwise
  */
