@@ -7,12 +7,14 @@
  */
 int main(void)
 {
-	int i;
-	long number = 612852475143, largest;
+	long i, number = 612852475143;
 
-	for (i = 2; i <= number / 2; i++)
+	for (i = 2; i <= number; i++)
 		if (number % i == 0)
-			largest = number / i;
-	printf("%ld\n", largest);
+		{	
+			number = number / i;
+			i--;
+		}
+	printf("%ld\n", i);
 	return (0);
 }
