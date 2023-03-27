@@ -10,7 +10,8 @@
 int _atoi(char *s)
 {
 	short found;
-	int l, minus, final;
+	int l, minus;
+	unsigned int final;
 
 	l = found = final = 0;
 	minus = 1;
@@ -20,7 +21,7 @@ int _atoi(char *s)
 			minus *= -1;
 		if (*(s + l) >= 48 && *(s + l) <= 57)
 		{
-			final *= 10; 
+			final *= 10;
 			final += (*(s + l) - 48);
 			found = 1;
 		}
