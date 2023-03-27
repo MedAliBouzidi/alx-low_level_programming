@@ -4,18 +4,18 @@
  * _strlen - return the length of string
  *
  * @s: pointer to the string
+ *
+ * Return: the length of string s
  */
 int _strlen(char *s)
 {
 	int len = 0;
 
-	if (!*s)
-		return (0);
-	else
-		while (*s)
-		{
-			len++;
-			s++;
-		}
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+
 	return (len);
 }
