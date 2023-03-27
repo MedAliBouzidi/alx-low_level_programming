@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prin_rev - print a string in revere
+ * print_rev - print a string in revere
  *
  * @s: pointer to string
  */
