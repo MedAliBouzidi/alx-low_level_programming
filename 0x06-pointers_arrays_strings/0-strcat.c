@@ -10,18 +10,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int ld, ls;
+	int i;
+	int j;
 
-	ld = ls = 0;
-
-	while (*(dest + ld))
-		ld++;
-	while (*(src + ls))
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[ld] = src[ls];
-		ls++;
-		ld++;
+		i++;
 	}
-	dest[ld] = '\0';
-	return (dest);
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);	
 }
