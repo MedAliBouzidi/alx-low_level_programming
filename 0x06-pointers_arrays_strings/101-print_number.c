@@ -7,24 +7,15 @@
  */
 void print_number(int n)
 {
-	int cpy = n, rev = 0;
+	unsigned int cpy = n;
 
-	if (n == 0)
-		_putchar(48);
 	if (n < 0)
 	{
 		_putchar(45);
 		cpy *= -1;
 	}
 
-	while (cpy != 0)
-	{
-		rev = (rev * 10) + (cpy % 10);
-		cpy /= 10;
-	}
-	while (rev != 0)
-	{
-		_putchar((rev % 10) + 48);
-		rev /= 10;
-	}
+	if (cpy / 10)
+		print_number(cpy / 10);
+	_putchar((cpy % 10) + 48);
 }
