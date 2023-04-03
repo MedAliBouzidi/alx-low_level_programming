@@ -16,19 +16,16 @@ char *_strstr(char *haystack, char *needle)
 	while (*(haystack + i))
 	{
 		j = 0;
-		while (*(needle + j) && *(needle + j) != *(haystack + i))
-			j++;
-		if (*(needle + j) == *(haystack + i))
+		while (*(needle + j))
 		{
-			j = 0;
-			while (*(haystack + i + j) && *(haystack + i + j) == *(needle + j))
+			if (*(needle + j) == *(haystack + i + j))
 				j++;
-			if (!*(needle + j))
-				return (haystack + i);
+			else
+				break;
 		}
+		if (!*(needle + j))
+			return (haystack + i);
 		i++;
 	}
-	if (!*needle)
-		return (haystack + i);
 	return ('\0');
 }
