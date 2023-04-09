@@ -9,7 +9,8 @@ int _atoi(char *s);
  * @argc: number of arguments
  * @argv: pointer to array of arguments
  *
- * Return: Always 0
+ * Return: if argc != 3 return 1,
+ * otherwise 0
  */
 int main(int argc, char **argv)
 {
