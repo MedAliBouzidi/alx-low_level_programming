@@ -25,7 +25,12 @@ int main(int argc, char **argv)
 	if (cents < 0)
 		change = 0;
 	else
-		change = get_change(cents);
+	{
+		if (cents < 1000000)
+			change = get_change(cents);
+		else
+			change = get_change(cents / 1000000) * 1000000 + get_change(cents % 1000000);
+	}	
 	printf("%d\n", change);
 	return (0);
 }
