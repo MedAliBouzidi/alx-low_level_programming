@@ -13,7 +13,7 @@ int get_change(int cents);
  */
 int main(int argc, char **argv)
 {
-	int cents, change;
+	int cents, change, mil = 1000000;
 
 	if (argc != 2)
 	{
@@ -26,11 +26,11 @@ int main(int argc, char **argv)
 		change = 0;
 	else
 	{
-		if (cents < 1000000)
+		if (cents < mil)
 			change = get_change(cents);
 		else
-			change = get_change(cents / 1000000) * 1000000 + get_change(cents % 1000000);
-	}	
+			change = get_change(cents / mil) * mil + get_change(cents % mil);
+	}
 	printf("%d\n", change);
 	return (0);
 }
