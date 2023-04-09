@@ -23,12 +23,9 @@ int main(int argc, char **argv)
 
 	cents = atoi(*++argv);
 	if (cents < 0)
-	{
-		printf("0\n");
-		return (1);
-	}
-
-	change = get_change(cents);
+		change = 0;
+	else
+		change = get_change(cents);
 	printf("%d\n", change);
 	return (0);
 }
