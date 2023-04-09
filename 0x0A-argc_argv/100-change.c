@@ -13,46 +13,31 @@ int get_change(int cents);
  */
 int main(int argc, char **argv)
 {
-	int cents, change, mil = 1000000;
-
+	int amount, coins;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	
+	amount = atoi(argv[1]);
+	coins = 0;
+	
+	if (amount > 25)
+		while (amount >= 25)
+			amount -= 25, coins++;
+	if (amount > 10 && amount < 25)
+		while (amount >= 10)
+			amount -= 10, coins++;
+	if (amount > 5 && amount < 10)
+		while (amount >= 5)
+			amount -= 5, coins++;
+	if (amount > 2 && amount < 5)
+		while (amount >= 2)
+			amount -= 2, coins++;
+	if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
+		coins++;
 
-	cents = atoi(*++argv);
-	if (cents < 0)
-		change = 0;
-	else
-	{
-		if (cents < mil)
-			change = get_change(cents);
-		else
-			change = get_change(cents / mil) * mil + get_change(cents % mil);
-	}
-	printf("%d\n", change);
-	return (0);
-}
-
-/**
- * get_change - get change from cents
- *
- * @cents: the amount of money to get change from
- *
- * Return: number of change coins
- */
-int get_change(int cents)
-{
-	if (cents == 1)
-		return (1);
-	if (cents >= 25)
-		return (1 + get_change(cents - 25));
-	if (cents >= 10)
-		return (1 + get_change(cents - 10));
-	if (cents >= 5)
-		return (1 + get_change(cents - 5));
-	if (cents >= 2)
-		return (1 + get_change(cents - 2));
+	printf("%d\n", coins);
 	return (0);
 }
