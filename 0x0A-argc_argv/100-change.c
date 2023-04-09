@@ -14,15 +14,16 @@ int get_change(int cents);
 int main(int argc, char **argv)
 {
 	int amount, coins;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	amount = atoi(argv[1]);
 	coins = 0;
-	
+
 	if (amount > 25)
 		while (amount >= 25)
 			amount -= 25, coins++;
