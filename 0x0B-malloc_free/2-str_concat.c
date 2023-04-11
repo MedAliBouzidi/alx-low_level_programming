@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	if (!*s1)
 		return (*str_concat("", s2));
 	if (!*s2)
-		return (*str_concat(s1, "");
+		return (*str_concat(s1, ""));
 
 	l1 = l2 = 0;
 	while (*(s1 + l1))
