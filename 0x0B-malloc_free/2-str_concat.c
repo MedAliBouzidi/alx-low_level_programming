@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 	int l1, l2, i, j;
 	char *s;
 
-	if (!*s1 && !*s2)
+	if (*s1 == NULL && *s2 == NULL)
 		return (str_concat("", ""));
-	if (!*s1)
+	if (*s1 == NULL)
 		return (str_concat("", s2));
-	if (!*s2)
+	if (*s2 == NULL)
 		return (str_concat(s1, ""));
 
 	l1 = l2 = 0;
