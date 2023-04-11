@@ -12,30 +12,32 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **a, w, h;
+	int **g, w, h;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	a = malloc(sizeof(int *) * height);
-	if (a == NULL)
+	g = malloc(sizeof(int *) * height);
+	if (g == NULL)
 		return (NULL);
 
 	w = h = 0;
 	while (h < height)
 	{
-		*(a + h) = malloc(sizeof(int) * width);
-		if (*(a + h) == NULL)
+		*(g + h) = malloc(sizeof(int) * width);
+		if (*(g + h) == NULL)
 		{
-			free(a);
+			while (--h >= 0)
+				free(*(g + h));
+			free(g);
 			return (NULL);
 		}
 		while (w < width)
 		{
-			*(*(a + h) + w) = 0;
+			*(*(g + h) + w) = 0;
 			w++;
 		}
 		h++;
 	}
-	return (a);
+	return (g);
 }
