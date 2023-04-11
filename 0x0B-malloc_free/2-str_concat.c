@@ -14,10 +14,6 @@ char *str_concat(char *s1, char *s2)
 	int l1, l2, i, j;
 	char *s;
 
-	if (s1 == NULL)
-		return (str_concat("", s2));
-	if (s2 == NULL)
-		return (str_concat(s1, ""));
 	l1 = l2 = 0;
 	while (*(s1 + l1))
 		l1++;
