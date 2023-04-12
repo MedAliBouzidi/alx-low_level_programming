@@ -19,7 +19,10 @@ char **strtow(char *str)
 	if (str == NULL || *str == 0)
 		return (NULL);
 	wc = get_words_count(str, 0);
-	w = malloc(sizeof(char *) * wc);
+	if (wc == 0)
+		return (NULL);
+
+	w = malloc(sizeof(char *) * wc + 1);
 	if (w == NULL)
 		return (NULL);
 
