@@ -22,6 +22,7 @@ char **strtow(char *str)
 	if (wc == 0)
 		return (NULL);
 
+	wc++;
 	w = (char **) malloc(sizeof(char *) * (wc + 1));
 	if (w == NULL)
 		return (NULL);
@@ -36,7 +37,7 @@ char **strtow(char *str)
 			e = i;
 		if (s != -1 && e != -1)
 		{
-			n = e - s + 3;
+			n = e - s + 2;
 			*(w + c) = malloc(sizeof(char) * n);
 			if (*(w + c) == NULL)
 			{
