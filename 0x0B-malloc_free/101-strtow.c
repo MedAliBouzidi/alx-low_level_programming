@@ -63,7 +63,7 @@ int get_words_count(char *str, int i)
 {
 	if (!*(str + i))
 		return (0);
-	if (*(str + i) != 32 && *(str + i + 1) == 32)
+	if (*(str + i) != 32 && *(str + i + 1) == 32 && !*(str + i + 1))
 		return (1 + get_words_count(str, ++i));
 	return (get_words_count(str, ++i));
 }
