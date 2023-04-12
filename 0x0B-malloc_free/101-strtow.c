@@ -29,7 +29,7 @@ char **strtow(char *str)
 	{
 		if (*(str + i) != 32 && s == -1)
 			s = i;
-		if (*(str + i) != 32 && *(str + i + 1) == 32)
+		if (*(str + i) != 32 && (*(str + i + 1) == 32 || !*(str + i + 1)))
 			e = i;
 		if (s != -1 && e != -1)
 		{
