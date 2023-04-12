@@ -22,7 +22,7 @@ char **strtow(char *str)
 	if (wc == 0)
 		return (NULL);
 
-	w = malloc(sizeof(char **) * (wc + 1));
+	w = (char **) malloc(sizeof(char *) * (wc + 1));
 	if (w == NULL)
 		return (NULL);
 
