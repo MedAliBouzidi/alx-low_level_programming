@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 
@@ -12,7 +13,7 @@ int get_words_count(char *str, int i);
  */
 char **strtow(char *str)
 {
-	int wc, i, j, s, e, c;
+	int wc, i, j, s, e, c, n;
 	char **w;
 
 	if (str == NULL || *str == 0)
@@ -35,9 +36,15 @@ char **strtow(char *str)
 			e = i;
 		if (s != -1 && e != -1)
 		{
-			*(w + c) = malloc(sizeof(char) * (e - s + 2));
+			n = e - s + 2;
+			*(w + c) = malloc(sizeof(char) * n);
 			if (*(w + c) == NULL)
+			{
+				while (--c >= 0)
+					free(w + --c);
+				free(w);
 				return (NULL);
+			}
 			j = 0;
 			while (s <= e)
 				*(*(w + c) + j++) = *(str + s++);
@@ -63,7 +70,7 @@ int get_words_count(char *str, int i)
 {
 	if (!*(str + i))
 		return (0);
-	if (*(str + i) != 32 && *(str + i + 1) == 32 && !*(str + i + 1))
+	if (*(str + i) != 32 && *(str + i + 1) == 32 && *(str + i + 1))
 		return (1 + get_words_count(str, ++i));
 	return (get_words_count(str, ++i));
 }
