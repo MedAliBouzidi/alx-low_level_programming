@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int get_words_count(char *str, int i);
@@ -22,7 +21,7 @@ char **strtow(char *str)
 	if (wc == 0)
 		return (NULL);
 
-	w = malloc(sizeof(char *) * wc + 1);
+	w = malloc(sizeof(char *) * (wc + 1));
 	if (w == NULL)
 		return (NULL);
 
