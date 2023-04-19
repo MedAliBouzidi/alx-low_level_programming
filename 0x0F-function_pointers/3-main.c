@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	op_func = get_op_func(op);
 	if (op_func == NULL)
 	{
-		printf("Erro\n");
+		printf("Error\n");
 		exit(100);
 	}
 
