@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	
+
 	op_func = get_op_func(op);
 	if (op_func == NULL)
 	{
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 
 	a = atoi(*(argv + 1));
 	b = atoi(*(argv + 3));
-	
+
 	printf("%d\n", op_func(a, b));
 
 	exit(EXIT_SUCCESS);
