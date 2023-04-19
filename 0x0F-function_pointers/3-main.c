@@ -14,6 +14,7 @@
 int main(int argc, char **argv)
 {
 	int a, b, (*op_func)(int, int);
+	char *op;
 
 	if (argc != 4)
 	{
@@ -21,16 +22,23 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	op_func = get_op_func(*(argv + 2));
-	if (op_func == NULL)
+	op = *(argv + 2);
+	if (*(op + 1))
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	
+	op_func = get_op_func(op);
+	if (op_func == NULL)
+	{
+		printf("Erro\n");
+		exit(100);
+	}
 
 	a = atoi(*(argv + 1));
 	b = atoi(*(argv + 3));
-
+	
 	printf("%d\n", op_func(a, b));
 
 	exit(EXIT_SUCCESS);
