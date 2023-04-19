@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	if (op_func == NULL)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
 	a = atoi(*(argv + 1));
