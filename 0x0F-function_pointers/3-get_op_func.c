@@ -23,9 +23,8 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	i = 0;
-	while (i < 13)
+	while (i < 10)
 		if (*(s + 0) == ops->op[i++])
-			break;
-
-	return (*(ops + (i / 2))->f);
+			return (*(ops + (i / 2))->f);
+	return (NULL);
 }
