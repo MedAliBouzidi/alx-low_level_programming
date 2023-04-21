@@ -3,19 +3,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-/**
- * struct type - Struct type format
- *
- * @t: type format
- * @ff: function associated
- *
- */
-typedef struct type
-{
-	char *c;
-	void (*ff)(va_list l, char *sep);
-} type_t;
-
 void print_int(va_list l, char *sep);
 void print_ch(va_list l, char *sep);
 void print_str(va_list l, char *sep);
