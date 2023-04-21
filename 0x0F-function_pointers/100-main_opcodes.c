@@ -14,9 +14,6 @@ int main(int argc, char **argv)
 	char *opc;
 	int i, nb;
 
-	*opc = (char *) main;
-	i = 0;
-
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -31,6 +28,8 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
+	opc = (char *) main;
+	i = 0;
 	while (i < nb)
 	{
 		printf("%02x", *(opc + i) & 0xFF);
