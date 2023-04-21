@@ -27,7 +27,7 @@ void print_all(const char * const format, ...)
 		{"s", print_str},
 		{NULL, NULL}
 	};
-	
+
 	i = 0, s = "";
 
 	va_start(l, format);
