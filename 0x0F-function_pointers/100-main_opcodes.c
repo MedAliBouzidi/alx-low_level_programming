@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	while (i < nb)
 	{
 		printf("%02x", *(opc + i) & 0xFF);
-		if (i != nb - 1)
+		if (i++ != nb - 1)
 			printf(" ");
 	}
 	putchar('\n');
