@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 3)
 		print_error(97, NULL);
-	
+
 	cp(*(argv + 1), *(argv + 2));
 	return (0);
 }
