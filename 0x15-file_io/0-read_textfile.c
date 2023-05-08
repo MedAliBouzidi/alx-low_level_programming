@@ -9,9 +9,9 @@
  *
  * Return: the actual number of letters it could read and print
  * or 0 if:
- * 	+ the file can not be opened or read
- * 	+ filename is NULL
- * 	+ write fails or does not write the expected amount of bytes
+ *	+ the file can not be opened or read
+ *	+ filename is NULL
+ *	+ write fails or does not write the expected amount of bytes
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
